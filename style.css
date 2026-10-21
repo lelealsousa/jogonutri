@@ -1,0 +1,247 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f8f2;
+    color: #263b32;
+}
+
+header {
+    background: linear-gradient(120deg, #218838, #52b788);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    max-width: 1150px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.placar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 18px;
+    margin-bottom: 22px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #0000000d;
+}
+
+.placar div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.placar span {
+    color: #63756a;
+    font-size: 13px;
+}
+
+.placar strong {
+    font-size: 25px;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    background: #218838;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #176b2b;
+}
+
+#restart {
+    margin-left: auto;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.painel {
+    min-width: 0;
+    padding: 18px;
+    background: white;
+    border: 1px solid #dce8de;
+    border-radius: 12px;
+}
+
+.painel h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.painel p {
+    color: #63756a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 180px;
+}
+
+.alimento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    background: #f8fcf8;
+    border: 1px solid #d7e6d9;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: grab;
+    overflow-wrap: anywhere;
+}
+
+.alimento:active {
+    cursor: grabbing;
+}
+
+.alimento.arrastando {
+    opacity: 0.4;
+}
+
+.alimento.correto {
+    background: #e4f6e8;
+    border-color: #8dc99a;
+    cursor: default;
+}
+
+.emoji {
+    font-size: 25px;
+}
+
+.destinos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.drop-zone {
+    min-height: 190px;
+    padding: 15px;
+    border: 2px dashed #9dc8a5;
+    border-radius: 12px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.drop-zone h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cesta {
+    background: #f0faf1;
+}
+
+.industrializados {
+    background: #fff5ed;
+    border-color: #e8b18c;
+}
+
+.drop-zone.destino {
+    background: #dff3e3;
+    border-color: #218838;
+}
+
+.industrializados.destino {
+    background: #ffe9d8;
+    border-color: #d97732;
+}
+
+.itens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.itens .alimento {
+    width: auto;
+    padding: 8px;
+    font-size: 12px;
+    cursor: default;
+}
+
+.itens .emoji {
+    font-size: 18px;
+}
+
+.mensagem {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e5f2e7;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+.mensagem.erro {
+    background: #fff0e8;
+    color: #a5471a;
+}
+
+.mensagem.sucesso {
+    background: #dff5e4;
+    color: #176b2b;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 25px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+}
+
+.resultado[hidden] {
+    display: none;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #63756a;
+}
+
+@media (max-width: 760px) {
+    .game {
+        grid-template-columns: 1fr;
+    }
+
+    .placar {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    #restart {
+        margin-left: 0;
+    }
+}

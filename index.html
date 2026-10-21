@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da Nutrição</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>🥗 Desafio da Nutrição</h1>
+        <p>Arraste os alimentos e monte uma cesta equilibrada!</p>
+    </header>
+
+    <main>
+        <section class="placar">
+            <div>
+                <span>Pontuação</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div>
+                <span>Alimentos separados</span>
+                <strong id="progress">0/10</strong>
+            </div>
+
+            <button id="restart">Reiniciar</button>
+        </section>
+
+        <section class="game">
+            <div class="painel alimentos">
+                <h2>🍎 Escolha os alimentos</h2>
+                <p>Arraste cada cartão para a área correspondente.</p>
+
+                <div id="foodList" class="food-list"></div>
+            </div>
+
+            <div class="painel destinos">
+                <h2>🧺 Separe os alimentos</h2>
+
+                <div class="cesta drop-zone" data-type="healthy">
+                    <h3>🧺 Cesta de alimentos saudáveis</h3>
+                    <p>Frutas, legumes e outros alimentos nutritivos.</p>
+                    <div id="basket" class="itens"></div>
+                </div>
+
+                <div class="industrializados drop-zone" data-type="junk">
+                    <h3>🍔 Alimentos industrializados e guloseimas</h3>
+                    <p>Coloque aqui os alimentos desta categoria.</p>
+                    <div id="junkBasket" class="itens"></div>
+                </div>
+            </div>
+        </section>
+
+        <p id="message" class="mensagem">
+            💡 Acerte a classificação para ganhar pontos!
+        </p>
+
+        <section id="result" class="resultado" hidden>
+            <h2>🎉 Parabéns!</h2>
+            <p>Você terminou o desafio.</p>
+            <p id="finalScore"></p>
+            <button id="playAgain">Jogar novamente</button>
+        </section>
+    </main>
+
+    <footer>
+        Aprenda sobre alimentação de forma divertida!
+    </footer>
+
+</body>
+</html>
